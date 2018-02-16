@@ -9,7 +9,20 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+  //Import the mongoose module
+  var mongoose = require('mongoose');
 
+  //Set up default mongoose connection
+  var mongoDB = 'mongodb://ltTiwrtP7DiVqx2aQcH3rbE!F6&zPCIm2V@HppdIzF!NIKF5JM:T8&cGCKDFh!eAXm7@8&mcyUrZiRQ17oS6kIfJQhxg6Ie0iBHgA@ds237868.mlab.com:37868/lx_local';
+  mongoose.connect(mongoDB);
+  // Get Mongoose to use the global promise library
+  mongoose.Promise = global.Promise;
+  //Get the default connection
+  var db = mongoose.connection;
+  
+  //Bind connection to error event (to get notification of connection errors)
+  db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+  
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
