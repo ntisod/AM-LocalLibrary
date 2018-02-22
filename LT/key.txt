@@ -1,0 +1,5 @@
+Username: ltTiwrtP7DiVqx2aQcH3rbE!F6&zPCIm2V@HppdIzF!NIKF5JM
+
+Password: T8&cGCKDFh!eAXm7@8&mcyUrZiRQ17oS6kIfJQhxg6Ie0iBHgA
+
+mongodb://<dbuser>:<dbpassword>@ds237868.mlab.com:37868/lx_local
